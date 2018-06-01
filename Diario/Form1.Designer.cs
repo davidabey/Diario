@@ -37,27 +37,28 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Nombre
             // 
-            this.Nombre.Location = new System.Drawing.Point(406, 53);
+            this.Nombre.Location = new System.Drawing.Point(438, 53);
             this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(288, 20);
+            this.Nombre.Size = new System.Drawing.Size(256, 20);
             this.Nombre.TabIndex = 4;
             // 
             // Contraseña
             // 
-            this.Contraseña.Location = new System.Drawing.Point(406, 118);
+            this.Contraseña.Location = new System.Drawing.Point(438, 107);
             this.Contraseña.Name = "Contraseña";
             this.Contraseña.PasswordChar = '*';
-            this.Contraseña.Size = new System.Drawing.Size(288, 20);
+            this.Contraseña.Size = new System.Drawing.Size(256, 20);
             this.Contraseña.TabIndex = 5;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(449, 169);
+            this.dateTimePicker1.Location = new System.Drawing.Point(438, 165);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 6;
@@ -85,30 +86,42 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(328, 59);
+            this.label1.Font = new System.Drawing.Font("Algerian", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(317, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(83, 21);
             this.label1.TabIndex = 9;
             this.label1.Text = "Nombre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(328, 125);
+            this.label2.Font = new System.Drawing.Font("Algerian", 14.25F);
+            this.label2.Location = new System.Drawing.Point(314, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(118, 21);
             this.label2.TabIndex = 10;
             this.label2.Text = "Cotraseña";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(41, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(267, 240);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Algerian", 14.25F);
+            this.label3.Location = new System.Drawing.Point(317, 165);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 21);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Fecha";
             // 
             // Form1
             // 
@@ -117,6 +130,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(718, 307);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -143,6 +157,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

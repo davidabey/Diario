@@ -25,5 +25,11 @@ namespace Diario
 
             op.NewNotas(idusuario, Titulo.Text, dateTimePicker1.Value, Descripcion.Text, Convert.ToString(comboBox1.SelectedValue));
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            op = new DiarioEntities1();
+            op.verNotas(idusuario);
+        }
     }
 }

@@ -220,9 +220,13 @@ namespace Diario
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Verificar", nombreParameter, contraseñaParameter, idusuario);
         }
     
-        public virtual ObjectResult<verNotas_Result> verNotas()
+        public virtual ObjectResult<verNotas_Result> verNotas(Nullable<int> idususario)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<verNotas_Result>("verNotas");
+            var idususarioParameter = idususario.HasValue ?
+                new ObjectParameter("idususario", idususario) :
+                new ObjectParameter("idususario", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<verNotas_Result>("verNotas", idususarioParameter);
         }
     }
 }

@@ -113,7 +113,9 @@
           <Parameter Name="contraseña" Type="varchar" Mode="In" />
           <Parameter Name="idusuario" Type="int" Mode="InOut" />
         </Function>
-        <Function Name="verNotas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="verNotas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idususario" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="DiarioModelStoreContainer">
           <EntitySet Name="Galeria" EntityType="Self.Galeria" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Notas" EntityType="Self.Notas" Schema="dbo" store:Type="Tables" />
@@ -246,7 +248,9 @@
             <Parameter Name="contraseña" Mode="In" Type="String" />
             <Parameter Name="idusuario" Mode="InOut" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="verNotas" ReturnType="Collection(DiarioModel.verNotas_Result)" />
+          <FunctionImport Name="verNotas" ReturnType="Collection(DiarioModel.verNotas_Result)" >
+          <Parameter Name="idususario" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="login1_Result">
           <Property Type="String" Name="Titulo" Nullable="true" MaxLength="50" />

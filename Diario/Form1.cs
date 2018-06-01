@@ -57,21 +57,24 @@ namespace Diario
         private void button2_Click(object sender, EventArgs e)
         {
             op = new DiarioEntities1();
-            ObjectParameter Output = new ObjectParameter("resultado", typeof(string));
+            ObjectParameter Output = new ObjectParameter("idusuario", typeof(int));
 
             if (!String.IsNullOrEmpty(Nombre.Text) && !String.IsNullOrEmpty(Contraseña.Text))
             {
                 try
                 {
                     op.Verificar(Nombre.Text, Contraseña.Text, Output);
-                    MessageBox.Show(Output.Value.ToString());
-                    if (Output.Value.ToString()>0 )
+                    //MessageBox.Show(Output.Value.ToString());
+                    if (Convert.ToInt32(Output.Value) > 0)
                     {
+                        MessageBox.Show("Bienvenido usuario", "",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Form frm = new Form2();
                         frm.Show();
-
-
                     }
+                    else
+                        MessageBox.Show("Datos Incorrectos", "",
+                            MessageBoxButtons.OK, MessageBoxIcon.Hand);
                   
                 }
 
