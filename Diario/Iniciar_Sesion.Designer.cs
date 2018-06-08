@@ -1,6 +1,6 @@
 ﻿namespace Diario
 {
-    partial class Form1
+    partial class Iniciar_Sesion
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Iniciar_Sesion));
             this.Nombre = new System.Windows.Forms.TextBox();
             this.Contraseña = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -86,20 +86,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Algerian", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(317, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 21);
+            this.label1.Size = new System.Drawing.Size(79, 24);
             this.label1.TabIndex = 9;
             this.label1.Text = "Nombre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Algerian", 14.25F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.label2.Location = new System.Drawing.Point(314, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 21);
+            this.label2.Size = new System.Drawing.Size(95, 24);
             this.label2.TabIndex = 10;
             this.label2.Text = "Cotraseña";
             // 
@@ -116,14 +116,14 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Algerian", 14.25F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.label3.Location = new System.Drawing.Point(317, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 21);
+            this.label3.Size = new System.Drawing.Size(64, 24);
             this.label3.TabIndex = 12;
             this.label3.Text = "Fecha";
             // 
-            // Form1
+            // Iniciar_Sesion
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,8 +140,9 @@
             this.Controls.Add(this.Contraseña);
             this.Controls.Add(this.Nombre);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Iniciar_Sesion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Diario";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

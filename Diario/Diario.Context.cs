@@ -207,7 +207,7 @@ namespace Diario
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
     
-        public virtual int Verificar(string nombre, string contraseña, ObjectParameter idusuario)
+        public virtual int Verificar(string nombre, string contraseña, ObjectParameter resultado)
         {
             var nombreParameter = nombre != null ?
                 new ObjectParameter("nombre", nombre) :
@@ -217,16 +217,16 @@ namespace Diario
                 new ObjectParameter("contraseña", contraseña) :
                 new ObjectParameter("contraseña", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Verificar", nombreParameter, contraseñaParameter, idusuario);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Verificar", nombreParameter, contraseñaParameter, resultado);
         }
     
-        public virtual ObjectResult<verNotas_Result> verNotas(Nullable<int> idususario)
+        public virtual ObjectResult<verNotas_Result> verNotas(Nullable<int> idusuario)
         {
-            var idususarioParameter = idususario.HasValue ?
-                new ObjectParameter("idususario", idususario) :
-                new ObjectParameter("idususario", typeof(int));
+            var idusuarioParameter = idusuario.HasValue ?
+                new ObjectParameter("idusuario", idusuario) :
+                new ObjectParameter("idusuario", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<verNotas_Result>("verNotas", idususarioParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<verNotas_Result>("verNotas", idusuarioParameter);
         }
     }
 }

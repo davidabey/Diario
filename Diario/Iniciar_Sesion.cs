@@ -12,10 +12,10 @@ using System.Data.Entity.Core.Objects;
 
 namespace Diario
 {
-    public partial class Form1 : Form
+    public partial class Iniciar_Sesion : Form
     {
         private DiarioEntities1 op;
-        public Form1()
+        public Iniciar_Sesion()
         {
             InitializeComponent();
         }
@@ -57,19 +57,19 @@ namespace Diario
         private void button2_Click(object sender, EventArgs e)
         {
             op = new DiarioEntities1();
-            ObjectParameter Output = new ObjectParameter("idusuario", typeof(int));
+            ObjectParameter Output = new ObjectParameter("resultado", typeof(int));
 
             if (!String.IsNullOrEmpty(Nombre.Text) && !String.IsNullOrEmpty(Contraseña.Text))
             {
                 try
                 {
                     op.Verificar(Nombre.Text, Contraseña.Text, Output);
-                    //MessageBox.Show(Output.Value.ToString());
+                    
                     if (Convert.ToInt32(Output.Value) > 0)
                     {
                         MessageBox.Show("Bienvenido usuario", "",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Form frm = new Form2();
+                        Form frm = new Inicio();
                         frm.Show();
                     }
                     else
